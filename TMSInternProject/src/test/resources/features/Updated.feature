@@ -27,13 +27,10 @@
   @SearchByHubname
   Scenario: To Search by hub name
     Given User must be staying on the linehaul details web page
+    And The user creates new connection
     When User Enters the desired hubname in the search bar
     And User clicks on the search icon
     Then User be able to see the hubs matching the search
-
-
-
-
 
   @SortbyDestinatiohub
   Scenario: To Sort bases on Destination hub
@@ -44,11 +41,8 @@
 
   @UndoConnection
   Scenario: To Undo the deleted connection
-    Given User must stay on the Linehaul details page
-    When User clicks on the add new connection button
-    And User must enter all the valid details on the fields
-    Then The connection will be established succesfully
     Given User will be on the linehaul details page
+    And The new connection must be created by user
     When User Clicks on the delete icon
     And Select the undo option
     Then Validate whether the connection has been restored.
@@ -60,6 +54,4 @@
     When User enter invalid values in the start time field
     And User clicks on the save button
     Then Mandatory error message will be displayed
-
-
 
