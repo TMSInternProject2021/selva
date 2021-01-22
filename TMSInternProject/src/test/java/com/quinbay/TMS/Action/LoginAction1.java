@@ -1,8 +1,10 @@
 package com.quinbay.TMS.Action;
 
 //import com.quinbay.TMS.Pages.LoginPage;
-import com.quinbay.TMS.Pages.LoginPage1;
+import Pages.LoginPage1;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginAction1 {
@@ -25,5 +27,11 @@ public class LoginAction1 {
     }
     public void navigation_To_linehaul_settings(){
         loginPage1.navigation_ToLinehaulDetails();
+    }
+
+    public boolean verifylogin_Action(){
+        return loginPage1.verifylogin();
+
+
     }
 }
