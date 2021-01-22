@@ -1,6 +1,6 @@
 package com.quinbay.TMS.Action;
 
-import com.quinbay.TMS.Pages.UndoConnectionPage;
+import Pages.UndoConnectionPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,5 +16,9 @@ public class UndoConnectionAction {
     }
     public void undo_Connection_Action(){
         undoConnectionPage.undo_connection();
+    }
+
+    public boolean verify_UndoAction(){
+       return  undoConnectionPage.verify_undo();
     }
 }
