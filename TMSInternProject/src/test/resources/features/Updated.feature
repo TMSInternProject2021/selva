@@ -14,7 +14,7 @@
     Given User must stay on the Linehaul details page
     When User clicks on the add new connection button
     And User must enter all the valid details on the fields
-    Then The connection will be established succesfully
+    Then The connection will be established successfully
 
   @SearchByDestintionHub
   Scenario: To Search by destination hub
