@@ -28,9 +28,9 @@ public class SortSteps {
 
     @Then("User be able to see the descending sorted linehaul details")
     public void theUserWillBeNavigatedToTheResultPage() {
-        assertThat("Verify",sortAction.verifySortDescendingOrderAction());
+        assertThat("Verify whether the destination hub is sorted in descending order",sortAction.verifySortDescendingOrderAction());
 
 
-        System.out.println("The user be able to see the descending sorted linehaul details");
+       // System.out.println("The user be able to see the descending sorted linehaul details");
     }
 }
