@@ -29,7 +29,7 @@ public class SearchByDestinationhubPage<selected_hub> {
     public WebElement selected_hub;
 
     //selected_hub=driver.findElement(By.xpath("//div[@class='option']"));
-String x="";
+String selected_hubText="";
 
 
 
@@ -38,7 +38,7 @@ String x="";
     public void select_DestinationHub() throws InterruptedException {
         select_hub.click();
         Thread.sleep(3000);
-        x=selected_hub.getText();
+        selected_hubText=selected_hub.getText();
         click_out.click();
     }
 
@@ -50,7 +50,7 @@ String x="";
     public boolean verifySearchByDestinationhub(){
 
 
-        if(org_result.getText().equals(x) || des_result.getText().equals(x)){
+        if(org_result.getText().equals(selected_hubText) || des_result.getText().equals(selected_hubText)){
             return true;
         }
         else
