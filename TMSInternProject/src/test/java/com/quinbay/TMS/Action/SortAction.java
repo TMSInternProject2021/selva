@@ -1,7 +1,6 @@
 package com.quinbay.TMS.Action;
 
-import com.quinbay.TMS.Pages.Add_New_Connection_Page;
-import com.quinbay.TMS.Pages.SortPage;
+import Pages.SortPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,6 +12,9 @@ public class SortAction {
 
     public void sort_Descending_action() throws InterruptedException {
         Sort_page.descending_Sort();
+    }
+    public boolean verifySortDescendingOrderAction(){
+        return(Sort_page.verify_DescendingSort());
     }
 
 }
