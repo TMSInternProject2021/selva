@@ -38,8 +38,8 @@ public class SearchSteps {
 
     @Then("User will be able to see the hubs matching the search")
     public void userWillBeAbleToSeeTheHubsMatchingTheSearch() {
-        assertThat("Unsuccessfull search",searchByDestinationhubAction.verifySearchByDestinationhub_Action());
-        System.out.println("User will be able to see the hubs matching the search based on destination hub");
+        assertThat("verify whether the search is successfull",searchByDestinationhubAction.verifySearchByDestinationhub_Action());
+        //System.out.println("User will be able to see the hubs matching the search based on destination hub");
     }
 
 
