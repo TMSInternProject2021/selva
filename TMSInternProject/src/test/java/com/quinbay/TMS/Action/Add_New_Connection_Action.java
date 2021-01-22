@@ -1,7 +1,6 @@
 package com.quinbay.TMS.Action;
 
-import com.quinbay.TMS.Pages.Add_New_Connection_Page;
-import com.quinbay.TMS.Pages.LoginPage;
+import Pages.Add_New_Connection_Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -34,6 +33,10 @@ public class Add_New_Connection_Action {
     public void enterDetailsForUndoAction() throws InterruptedException {
         ANCPage.click_Addnew();
         ANCPage.enterDetailsForUndo();
+    }
+
+    public boolean verifyConnectionIsSuccessfull_Action(){
+        return ANCPage.verifyConnectionIsSuccessfull();
     }
 
 
