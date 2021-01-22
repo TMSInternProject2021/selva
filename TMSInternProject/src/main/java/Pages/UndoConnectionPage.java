@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +26,17 @@ public class UndoConnectionPage {
     public  void undo_connection(){
         undo_button.click();
 
+    }
+    public boolean verify_undo(){
+
+        WebElement undo=driver.findElement(By.xpath("//div//div//p[contains(text(),'Deleted data has been restored successfully'"));
+        if(undo!=null){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
