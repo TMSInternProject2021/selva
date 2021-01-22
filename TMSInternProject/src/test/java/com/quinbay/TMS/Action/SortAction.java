@@ -14,7 +14,7 @@ public class SortAction {
         Sort_page.descending_Sort();
     }
     public boolean verifySortDescendingOrderAction(){
-        return(Sort_page.verify_DescendingSort());
+        return Sort_page.verify_DescendingSort();
     }
 
 }
