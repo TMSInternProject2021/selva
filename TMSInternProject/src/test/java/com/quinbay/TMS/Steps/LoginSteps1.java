@@ -12,6 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.google.common.base.Predicates.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class LoginSteps1 {
 
     public static WebDriver driver;
@@ -35,11 +38,6 @@ public class LoginSteps1 {
 
     }
 
-
-
-
-
-
     @When("User clicks on the settings page")
     public void user_clicks_on_the_settings_page() {
 
@@ -53,17 +51,14 @@ public class LoginSteps1 {
 
     }
 
-    @Then("User lands on Linehaul page")
-    public void user_lands_on_linehaul_page() {
-
-        System.out.println("On Linehaul details Page");
-    }
-
-
-
-
     @And("User selects the hub and enters TMS hub")
     public void userSelectsTheHubAndEntersTMSHub() throws InterruptedException {
         action1.select_Hub_Action();
+    }
+
+    @Then("User lands on Linehaul page")
+    public void user_lands_on_linehaul_page() {
+        assertThat("Not Logged in successfully",action1.verifylogin_Action());
+        System.out.println("On Linehaul details Page");
     }
 }
