@@ -77,6 +77,16 @@ try {
         Lin_details.click();
 
     }
+    public boolean verifylogin(){
+        boolean status=false;
+        WebElement verify = driver.findElement(By.xpath("//div//button[@class='default-button pull-right marigin-top10 btn']"));
+        if(verify!=null)
+        {
+            status = true;
+        }
+        return status;
+
+    }
 
 
 
