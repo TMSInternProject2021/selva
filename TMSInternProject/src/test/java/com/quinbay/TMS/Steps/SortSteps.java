@@ -6,6 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class SortSteps {
     WebDriver driver;
@@ -26,6 +28,9 @@ public class SortSteps {
 
     @Then("User be able to see the descending sorted linehaul details")
     public void theUserWillBeNavigatedToTheResultPage() {
+        assertThat("Verify",sortAction.verifySortDescendingOrderAction());
+
+
         System.out.println("The user be able to see the descending sorted linehaul details");
     }
 }
