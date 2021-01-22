@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -110,6 +111,23 @@ public class Add_New_Connection_Page {
         save_button.click();
 
     }
+
+    public boolean verifyConnectionIsSuccessfull(){
+        boolean status=false;
+
+            WebElement addSuccess=driver.findElement(By.xpath("//div//div//p[contains(text(),'Successfully added')]"));
+            if(addSuccess!=null)
+            {
+                status=true;
+            }
+            System.out.println(addSuccess.getText());
+        // true;
+
+        return status;
+
+    }
+
+
 
     public void enterDetailsForUndo() throws InterruptedException {
         orghub.click();
