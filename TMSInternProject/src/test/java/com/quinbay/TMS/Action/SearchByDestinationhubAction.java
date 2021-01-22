@@ -1,8 +1,6 @@
 package com.quinbay.TMS.Action;
 
-import com.quinbay.TMS.Pages.LoginPage1;
-import com.quinbay.TMS.Pages.SearchByDestinationhubPage;
-import com.quinbay.TMS.Pages.SortPage;
+import Pages.SearchByDestinationhubPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -21,6 +19,9 @@ public class SearchByDestinationhubAction {
     }
     public void click_Hub_Action() throws InterruptedException {
         searchByDestinationhubPage.select_DestinationHub();
+    }
+    public boolean verifySearchByDestinationhub_Action(){
+        return searchByDestinationhubPage.verifySearchByDestinationhub();
     }
 
 }
