@@ -6,6 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class ValidateTimeFieldSteps {
 
@@ -32,7 +34,7 @@ public class ValidateTimeFieldSteps {
 
     @Then("Mandatory error message will be displayed")
     public void mandatoryErrorMessageWillBeDisplayed() {
-
-        System.out.println("Validation of time field is tested----'Mandatory error message will be displayed'");
+    assertThat("Verify whether the error message is displayed",validateTimeFieldAction.verify_TimeFieldAction());
+        //System.out.println("Validation of time field is tested----'Mandatory error message will be displayed'");
     }
 }
