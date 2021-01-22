@@ -1,7 +1,6 @@
 package com.quinbay.TMS.Action;
 
-import com.quinbay.TMS.Pages.Add_New_Connection_Page;
-import com.quinbay.TMS.Pages.ValidateTimeFieldPage;
+import Pages.ValidateTimeFieldPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -32,5 +31,8 @@ public class ValidateTimeFieldAction {
 
     public  void select_save_action() throws InterruptedException {
         validatePage.click_Save();
+    }
+    public boolean verify_TimeFieldAction(){
+        return validatePage.verify_ValidationofTimeField();
     }
 }
