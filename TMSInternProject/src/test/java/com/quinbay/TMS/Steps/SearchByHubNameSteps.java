@@ -1,9 +1,7 @@
 package com.quinbay.TMS.Steps;
 
 import com.quinbay.TMS.Action.Add_New_Connection_Action;
-import com.quinbay.TMS.Action.SearchByDestinationhubAction;
 import com.quinbay.TMS.Action.SearchByHubNameAction;
-import com.quinbay.TMS.Pages.SearchByHubNamePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -45,6 +43,7 @@ public class SearchByHubNameSteps {
 
     @Then("User be able to see the hubs matching the search")
     public void userBeAbleToSeeTheHubsMatchingTheSearch() {
+        searchByHubNameAction.verifySearchByHubNameAction();
         System.out.println("User be able to see the hubs matching the search");
     }
 
