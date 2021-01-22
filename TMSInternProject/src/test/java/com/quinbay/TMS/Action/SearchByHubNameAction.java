@@ -1,5 +1,6 @@
 package com.quinbay.TMS.Action;
 
+import Pages.Add_New_Connection_Page;
 import Pages.SearchByHubNamePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -21,6 +22,8 @@ public class SearchByHubNameAction {
     }
 
     public boolean verifySearchByHubNameAction(){
-        return(searchByHubNamePage.verifySearchByHubName());
+       return searchByHubNamePage.verifySearchByHubName();
     }
+
+
 }
