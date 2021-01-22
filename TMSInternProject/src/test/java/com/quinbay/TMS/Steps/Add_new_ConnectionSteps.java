@@ -41,8 +41,8 @@ public class Add_new_ConnectionSteps {
         add_new_connection_action.select_save_action();
         Thread.sleep(1000);
 
-        assertThat("Connection was not established",add_new_connection_action.verifyConnectionIsSuccessfull_Action());
-        System.out.println("Connection has been established");
+        assertThat("Connection was established successfully",add_new_connection_action.verifyConnectionIsSuccessfull_Action());
+        //System.out.println("Connection has been established");
     }
 
 
