@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class UndoConnectionSteps {
     WebDriver driver;
@@ -38,8 +40,8 @@ public class UndoConnectionSteps {
 
     @Then("Validate whether the connection has been restored.")
     public void validateWhetherTheConnectionHasBeenRestored() {
-
-        System.out.println("The connection has been restored");
+        assertThat("Verify whether the connection is restored",undoConnectionAction.verify_UndoAction());
+        //System.out.println("The connection has been restored");
     }
 
 
