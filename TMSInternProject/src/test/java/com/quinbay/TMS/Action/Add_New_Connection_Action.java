@@ -40,5 +40,8 @@ public class Add_New_Connection_Action {
     }
 
 
-
+    public void enterDetailsForSearchByHubAction() throws InterruptedException {
+        ANCPage.click_Addnew();
+        ANCPage.enterDetailsForSearchByHub();
+    }
 }
