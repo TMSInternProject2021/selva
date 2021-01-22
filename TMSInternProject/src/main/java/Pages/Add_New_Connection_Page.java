@@ -20,6 +20,8 @@ public class Add_New_Connection_Page {
     public void click_Addnew(){
         addnewbutton.click();
     }
+
+
     @FindBy(xpath = "//div//div//input[@class='input-box-style input dropdown large']")
     WebElement orghub;
 
@@ -130,6 +132,7 @@ public class Add_New_Connection_Page {
 
 
     public void enterDetailsForUndo() throws InterruptedException {
+
         orghub.click();
         Thread.sleep(1000);
         orghub.sendKeys("Bad");
@@ -158,6 +161,41 @@ public class Add_New_Connection_Page {
 
         save_button.click();
     }
+
+
+    public void enterDetailsForSearchByHub() throws InterruptedException {
+        //addnewbutton.click();
+
+        Thread.sleep(3000);
+        orghub.click();
+        Thread.sleep(1000);
+        orghub.sendKeys("Cep");
+        select_orghub.click();
+        deshub.click();
+        Thread.sleep(1000);
+        deshub.sendKeys("TM");
+        sel_deshub.click();
+        date.click();
+        Thread.sleep(1000);
+        sel_date.click();
+        repeat.click();
+        Thread.sleep(1000);
+        sel_repeat.click();
+        start_time.click();
+        Thread.sleep(1000);
+        start_time.sendKeys("02:20");
+        transit_time.click();
+        Thread.sleep(1000);
+        transit_time.sendKeys("30:03");
+        vehicle_type.click();
+        Thread.sleep(1000);
+
+        select_vehicle_type.click();
+        Thread.sleep(1000);
+
+        save_button.click();
+    }
+
 
 
 
