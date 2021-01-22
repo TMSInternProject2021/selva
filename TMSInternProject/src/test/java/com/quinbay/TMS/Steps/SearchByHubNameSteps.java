@@ -26,9 +26,10 @@ public class SearchByHubNameSteps {
     }
     @And("The user creates new connection")
     public void theUserCreatesNewConnection() throws InterruptedException {
-        ac.click_addnew_action();
-        ac.enter_details_action();
-        ac.select_save_action();
+
+
+        ac.enterDetailsForSearchByHubAction();
+
     }
 
 
@@ -45,8 +46,9 @@ public class SearchByHubNameSteps {
 
     @Then("User be able to see the hubs matching the search")
     public void userBeAbleToSeeTheHubsMatchingTheSearch() {
-        assertThat("Verify whether the results are based on given hub on search bar",searchByHubNameAction.verifySearchByHubNameAction());
-       // System.out.println("User be able to see the hubs matching the search");
+        assertThat("Verify whether the results are based on given hub on search bar", searchByHubNameAction.verifySearchByHubNameAction());
+        System.out.println("User be able to see the hubs matching the search");
+
     }
 
 
