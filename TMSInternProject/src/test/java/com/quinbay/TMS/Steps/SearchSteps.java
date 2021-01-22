@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class SearchSteps {
     WebDriver driver;
     public SearchByDestinationhubAction searchByDestinationhubAction;
@@ -36,6 +38,7 @@ public class SearchSteps {
 
     @Then("User will be able to see the hubs matching the search")
     public void userWillBeAbleToSeeTheHubsMatchingTheSearch() {
+        assertThat("Unsuccessfull search",searchByDestinationhubAction.verifySearchByDestinationhub_Action());
         System.out.println("User will be able to see the hubs matching the search based on destination hub");
     }
 
