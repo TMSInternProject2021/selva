@@ -58,7 +58,7 @@ public class LoginSteps1 {
 
     @Then("User lands on Linehaul page")
     public void user_lands_on_linehaul_page() {
-        assertThat("Not Logged in successfully",action1.verifylogin_Action());
-        System.out.println("On Linehaul details Page");
+        assertThat("Verifiy whether Logged in successfully and landing on linehaul details page",action1.verifylogin_Action());
+        //System.out.println("On Linehaul details Page");
     }
 }
