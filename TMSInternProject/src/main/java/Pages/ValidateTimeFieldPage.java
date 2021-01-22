@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -110,5 +111,19 @@ public class ValidateTimeFieldPage {
         save_button.click();
 
     }
+
+
+
+    public boolean verify_ValidationofTimeField(){
+        WebElement error_message=driver.findElement(By.xpath("//div//span[@class='error-msg error']"));
+        if(error_message!=null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
 
 }
