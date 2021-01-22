@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class SearchByHubNameSteps {
     WebDriver driver;
@@ -43,8 +45,8 @@ public class SearchByHubNameSteps {
 
     @Then("User be able to see the hubs matching the search")
     public void userBeAbleToSeeTheHubsMatchingTheSearch() {
-        searchByHubNameAction.verifySearchByHubNameAction();
-        System.out.println("User be able to see the hubs matching the search");
+        assertThat("Verify whether the results are based on given hub on search bar",searchByHubNameAction.verifySearchByHubNameAction());
+       // System.out.println("User be able to see the hubs matching the search");
     }
 
 
