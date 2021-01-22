@@ -1,6 +1,6 @@
 package com.quinbay.TMS.Action;
 
-import com.quinbay.TMS.Pages.SearchByHubNamePage;
+import Pages.SearchByHubNamePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -18,5 +18,9 @@ public class SearchByHubNameAction {
 
     public void click_Search_Icon_Action(){
         searchByHubNamePage.click_Search_Icon();
+    }
+
+    public boolean verifySearchByHubNameAction(){
+        return(searchByHubNamePage.verifySearchByHubName());
     }
 }
